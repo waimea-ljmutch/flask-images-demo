@@ -35,7 +35,7 @@ def show_welcome():
 def show_all_creatures():
     with connect_db() as db:
         sql = """
-            SELECT id, species, name
+            SELECT id, species, name, image_file
             FROM creatures
         """
         params = ()
@@ -43,6 +43,12 @@ def show_all_creatures():
 
         return render_template("pages/creature_list.jinja", creatures=creatures)
 
+#-----------------------------------------------------------
+# New creature page - show form
+#-----------------------------------------------------------
+@app.get("/creature/New")
+def show_all_creatures_form():
+    return render_template("pages/creature_form.jinja")
 
 #-----------------------------------------------------------
 # Help page - Show some help
