@@ -32,7 +32,7 @@ class CreatureTable:
     SEED_DATA = """
         INSERT INTO creatures (species, name, image_file)
         VALUES
-            ("Dragon",  "Pippa", "pippa.png")
+            ("Dragon",  "monster", "monstere.png")
 
     """
 

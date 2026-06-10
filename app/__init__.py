@@ -46,8 +46,8 @@ def show_all_creatures():
 #-----------------------------------------------------------
 # New creature page - show form
 #-----------------------------------------------------------
-@app.get("/creature/New")
-def show_all_creatures_form():
+@app.get("/creature/new")
+def creatures_form():
     return render_template("pages/creature_form.jinja")
 
 #-----------------------------------------------------------
